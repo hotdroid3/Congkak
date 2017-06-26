@@ -72,6 +72,8 @@ public class Board {
         getPlayer_2_BoardPitList().clear();
         getBoardPitLists().clear();
         getPlayerPits().clear();
+        setPlayer_1(null);
+        setPlayer_2(null);
 
         getPlayerPits().add(PLAYER_1, new PlayerPit());
         getPlayerPits().add(PLAYER_2, new PlayerPit());
@@ -118,7 +120,7 @@ public class Board {
         System.out.println();
         System.out.print("\t");
 
-        for(BoardPit pit: getPlayer_1_BoardPitList())
+        for(BoardPit pit: getPlayer_2_BoardPitList())
         {
             System.out.print(pit.getNumOfSeeds() + "     ");
         }
@@ -134,7 +136,7 @@ public class Board {
         }
 
 
-        System.out.println("\n\t\t" + getPlayer_2().getName() + ": " +  getPlayerPits().get(PLAYER_1).getNumOfSeeds());
+        System.out.println("\n\t\t" + getPlayer_2().getName() + ": " +  getPlayerPits().get(PLAYER_2).getNumOfSeeds());
     }
 
     public List<List<BoardPit>> getBoardPitLists() {
