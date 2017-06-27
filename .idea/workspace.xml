@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28685da2-7a95-4677-80d9-c8eabfa9bcb0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/datastructure/assignment/congkak/Board.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/BoardController.class" afterPath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/BoardController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$1$1.class" afterPath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$1$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/datastructure/assignment/congkak/PlayAgain.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$1$1.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$1.class" afterPath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$2.class" afterPath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$3.class" afterPath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main.class" afterPath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/background.jpg" afterPath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/background.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/datastructure/assignment/congkak/background.jpg" afterPath="$PROJECT_DIR$/src/datastructure/assignment/congkak/background.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main.css" afterPath="$PROJECT_DIR$/out/production/Congkak/datastructure/assignment/congkak/Main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/datastructure/assignment/congkak/BoardController.java" afterPath="$PROJECT_DIR$/src/datastructure/assignment/congkak/BoardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.css" afterPath="$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.java" afterPath="$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -140,11 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoardController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BoardController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/BoardController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-435">
-              <caret line="165" column="24" lean-forward="false" selection-start-line="165" selection-start-column="24" selection-end-line="165" selection-end-column="24" />
+            <state relative-caret-position="576">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="e#8349#8350#0" expanded="true" />
                 <element signature="e#8386#8387#0" expanded="true" />
@@ -159,40 +154,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="310" column="58" lean-forward="false" selection-start-line="310" selection-start-column="58" selection-end-line="310" selection-end-column="58" />
+            <state relative-caret-position="-93">
+              <caret line="382" column="5" lean-forward="false" selection-start-line="382" selection-start-column="5" selection-end-line="382" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#13238#13239#0" expanded="true" />
-                <element signature="e#13278#13279#0" expanded="true" />
-                <element signature="e#13331#13332#0" expanded="true" />
-                <element signature="e#13379#13380#0" expanded="true" />
-                <element signature="e#13415#13416#0" expanded="true" />
-                <element signature="e#13455#13456#0" expanded="true" />
-                <element signature="e#13508#13509#0" expanded="true" />
-                <element signature="e#13556#13557#0" expanded="true" />
-                <element signature="e#13593#13594#0" expanded="true" />
-                <element signature="e#13634#13635#0" expanded="true" />
-                <element signature="e#13689#13690#0" expanded="true" />
-                <element signature="e#13739#13740#0" expanded="true" />
-                <element signature="e#13777#13778#0" expanded="true" />
-                <element signature="e#13816#13817#0" expanded="true" />
-                <element signature="e#13871#13872#0" expanded="true" />
-                <element signature="e#13917#13918#0" expanded="true" />
+                <element signature="e#15189#15190#0" expanded="true" />
+                <element signature="e#15226#15227#0" expanded="true" />
+                <element signature="e#15266#15267#0" expanded="true" />
+                <element signature="e#15319#15320#0" expanded="true" />
+                <element signature="e#15367#15368#0" expanded="true" />
+                <element signature="e#15403#15404#0" expanded="true" />
+                <element signature="e#15443#15444#0" expanded="true" />
+                <element signature="e#15496#15497#0" expanded="true" />
+                <element signature="e#15544#15545#0" expanded="true" />
+                <element signature="e#15581#15582#0" expanded="true" />
+                <element signature="e#15622#15623#0" expanded="true" />
+                <element signature="e#15677#15678#0" expanded="true" />
+                <element signature="e#15727#15728#0" expanded="true" />
+                <element signature="e#15765#15766#0" expanded="true" />
+                <element signature="e#15804#15805#0" expanded="true" />
+                <element signature="e#15859#15860#0" expanded="true" />
+                <element signature="e#15905#15906#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Board.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Board.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -200,8 +186,28 @@
       <file leaf-file-name="Main.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.css">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="9" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayAgain.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/PlayAgain.css">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
+              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Board.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -231,6 +237,12 @@
       <find>setFill</find>
       <find>800</find>
       <find>Pos.</find>
+      <find>setGri</find>
+      <find>player</find>
+      <find>player 2</find>
+      <find>turnStatus.setText</find>
+      <find>turnStatus</find>
+      <find>gameBoard</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -257,6 +269,8 @@
         <option value="$PROJECT_DIR$/src/datastructure/assignment/congkak/BoardController.java" />
         <option value="$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.css" />
         <option value="$PROJECT_DIR$/src/datastructure/assignment/congkak/Board.css" />
+        <option value="$PROJECT_DIR$/src/datastructure/assignment/congkak/PlayAgain.cc.css" />
+        <option value="$PROJECT_DIR$/src/datastructure/assignment/congkak/PlayAgain.css" />
         <option value="$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.java" />
       </list>
     </option>
@@ -789,12 +803,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1498399114581</updated>
-      <workItem from="1498399122420" duration="95968000" />
+      <workItem from="1498399122420" duration="101727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95968000" />
+    <option name="totallyTimeSpent" value="101727000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -806,7 +820,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -819,7 +833,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908913" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34573948" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3927522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908913" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -839,6 +853,37 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908913" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908913" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34573948" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908913" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908913" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -973,10 +1018,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Board.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/PlayAgain.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="9" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="382" column="5" lean-forward="false" selection-start-line="382" selection-start-column="5" selection-end-line="382" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#15189#15190#0" expanded="true" />
+            <element signature="e#15226#15227#0" expanded="true" />
+            <element signature="e#15266#15267#0" expanded="true" />
+            <element signature="e#15319#15320#0" expanded="true" />
+            <element signature="e#15367#15368#0" expanded="true" />
+            <element signature="e#15403#15404#0" expanded="true" />
+            <element signature="e#15443#15444#0" expanded="true" />
+            <element signature="e#15496#15497#0" expanded="true" />
+            <element signature="e#15544#15545#0" expanded="true" />
+            <element signature="e#15581#15582#0" expanded="true" />
+            <element signature="e#15622#15623#0" expanded="true" />
+            <element signature="e#15677#15678#0" expanded="true" />
+            <element signature="e#15727#15728#0" expanded="true" />
+            <element signature="e#15765#15766#0" expanded="true" />
+            <element signature="e#15804#15805#0" expanded="true" />
+            <element signature="e#15859#15860#0" expanded="true" />
+            <element signature="e#15905#15906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/BoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="165" column="24" lean-forward="false" selection-start-line="165" selection-start-column="24" selection-end-line="165" selection-end-column="24" />
+        <state relative-caret-position="576">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="e#8349#8350#0" expanded="true" />
             <element signature="e#8386#8387#0" expanded="true" />
@@ -986,48 +1082,6 @@
             <element signature="e#8551#8552#0" expanded="true" />
             <element signature="e#8602#8603#0" expanded="true" />
             <element signature="e#8646#8647#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Board.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/datastructure/assignment/congkak/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="310" column="58" lean-forward="false" selection-start-line="310" selection-start-column="58" selection-end-line="310" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#13238#13239#0" expanded="true" />
-            <element signature="e#13278#13279#0" expanded="true" />
-            <element signature="e#13331#13332#0" expanded="true" />
-            <element signature="e#13379#13380#0" expanded="true" />
-            <element signature="e#13415#13416#0" expanded="true" />
-            <element signature="e#13455#13456#0" expanded="true" />
-            <element signature="e#13508#13509#0" expanded="true" />
-            <element signature="e#13556#13557#0" expanded="true" />
-            <element signature="e#13593#13594#0" expanded="true" />
-            <element signature="e#13634#13635#0" expanded="true" />
-            <element signature="e#13689#13690#0" expanded="true" />
-            <element signature="e#13739#13740#0" expanded="true" />
-            <element signature="e#13777#13778#0" expanded="true" />
-            <element signature="e#13816#13817#0" expanded="true" />
-            <element signature="e#13871#13872#0" expanded="true" />
-            <element signature="e#13917#13918#0" expanded="true" />
           </folding>
         </state>
       </provider>

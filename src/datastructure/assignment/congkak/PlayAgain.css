@@ -1,0 +1,24 @@
+.root{
+    -fx-background-image: url("background.jpg");
+}
+
+.label{
+    -fx-font-size: 50px;
+    -fx-font-family: "Montserrat";
+    -fx-fill: #818181;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+
+#startNewGame {
+    -fx-text-fill: white;
+    -fx-font-family: "Montserrat";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: rgb(49, 89, 23);
+    -fx-border-radius: 5;
+    -fx-padding: 5px 30px ;
+}
+#startNewGame:hover {
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1);
+}

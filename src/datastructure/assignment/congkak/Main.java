@@ -34,13 +34,17 @@ public class Main extends Application{
 
     private static final int PLAYER_1 = 0;
     private static final int PLAYER_2 = 1;
+    private static final int WON = 0;
+    private static final int LOSS = 1;
+    private static final int DRAW = 2;
+    private static final int RESET = 0;
 
     private boolean player1Turn = true;
     private Player player1 = null;
     private Player player2 = null;
     private Board gameBoard;
     private BoardController boardController;
-
+    private Scene mainScene;
 
     public static void main(String[] args) {
 
@@ -107,6 +111,64 @@ public class Main extends Application{
         warningText.setId("warningText");
         grid.add(warningText,1,12);
 
+        Runnable replayTask = new Runnable() {
+            @Override
+            public void run() {
+                GridPane playAgain = new GridPane();
+                playAgain.setAlignment(Pos.CENTER);
+                playAgain.setHgap(10);
+                playAgain.setVgap(10);
+                playAgain.setPadding(new Insets(25, 25, 25, 25));
+
+                Label player1Score = new Label("Player 1: " + gameBoard.getPlayerPits().get(PLAYER_1).getNumOfSeeds());
+                Label player2Score = new Label("Player 2: " + gameBoard.getPlayerPits().get(PLAYER_2).getNumOfSeeds());
+                String winnerText = null;
+                int winner = boardController.isPlayerOneWinner();
+                if(winner == WON)
+                {
+                    winnerText = "Player 1 Wins!";
+                }
+                else if(winner == DRAW)
+                {
+                    winnerText = "It's a draw!";
+                }
+                else
+                {
+                    winnerText = "Player 2 Wins";
+                }
+                Label win = new Label(winnerText);
+
+                playAgain.add(player1Score,0,0,7,1);
+                playAgain.add(player2Score,7,0,7,1);
+                playAgain.add(win, 10,5,10,1);
+
+                Label promptText = new Label("Do you want to play again?");
+                //promptText.setId("welcome");
+                playAgain.add(promptText, 10, 7, 10, 1);
+
+                Button startNewGame = new Button("Play Again!");
+                startNewGame.setId("startNewGame");
+                HBox hBoxStart = new HBox(10);
+                hBoxStart.setAlignment(Pos.BOTTOM_CENTER);
+                hBoxStart.getChildren().add(startNewGame);
+                playAgain.add(hBoxStart, 5, 12);
+
+                startNewGame.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+
+                        primaryStage.setScene(mainScene);
+                        primaryStage.show();
+                    }
+                });
+
+                Scene scene = new Scene(playAgain, 1700, 800);
+                scene.getStylesheets().add
+                        (Main.class.getResource("PlayAgain.css").toExternalForm());
+                primaryStage.setScene(scene);
+                primaryStage.show();
+            }
+        };
 
         Runnable task = new Runnable()
         {
@@ -119,7 +181,7 @@ public class Main extends Application{
                 boardGridPane.setVgap(10);
                 boardGridPane.setPadding(new Insets(10, 10, 10, 10));
                 //boardGridPane.setGridLinesVisible(true);
-                Label turnStatus = new Label("Player 1's Turn:");
+                Label turnStatus = new Label("Player 1 Turn");
 
                 HBox hBoxTurn = new HBox(10);
                 hBoxTurn.setAlignment(Pos.TOP_CENTER);
@@ -163,12 +225,12 @@ public class Main extends Application{
                                     {
                                         boardController.executeTurn(Integer.parseInt(button.getId()),Main.this.player1);
                                         setPlayer1Turn(false);
-                                        turnStatus.setText(isPlayer1Turn() ? "Player 1's Turn:" : "Player 2's Turn");
-                                    }
-                                    else
-                                    {
-
-                                        //implement finish game
+                                        turnStatus.setText(isPlayer1Turn() ? "Player 1 Turn" : "Player 2 Turn");
+                                        if(boardController.isPlayerBoardPitEmpty(player1))
+                                        {
+                                            reset();
+                                            Platform.runLater(replayTask);
+                                        }
                                     }
 
                                 }
@@ -178,11 +240,12 @@ public class Main extends Application{
                                     {
                                         boardController.executeTurn(Integer.parseInt(button.getId()),Main.this.player2);
                                         setPlayer1Turn(true);
-                                        turnStatus.setText(isPlayer1Turn() ? "Player 1's Turn:" : "Player 2's Turn");
-                                    }
-                                    else
-                                    {
-                                        //implement finish game
+                                        turnStatus.setText(isPlayer1Turn() ? "Player 1 Turn" : "Player 2 Turn");
+                                        if(boardController.isPlayerBoardPitEmpty(player2))
+                                        {
+                                            reset();
+                                            Platform.runLater(replayTask);
+                                        }
                                     }
 
                                 }
@@ -206,6 +269,8 @@ public class Main extends Application{
             }
         };
 
+
+
         next.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -228,7 +293,7 @@ public class Main extends Application{
                     else{
                         setNumOfPlayers(numOfPlayers);
                     }
-                    if(!(numberOfSeeds>= 4 && numberOfSeeds <=9))
+                    if(!(numberOfSeeds>= 2 && numberOfSeeds <=9))
                     {
                         throw new IllegalArgumentException("Number of seeds in pit must be from 4-9!");
                     }
@@ -236,7 +301,7 @@ public class Main extends Application{
                     {
                         setNumberOfSeeds(numberOfSeeds);
                     }
-                    if(!(numberOfPits>= 7 && numberOfPits <=10))
+                    if(!(numberOfPits>= 3 && numberOfPits <=10))
                     {
                         throw new IllegalArgumentException("Number of pits per player should be from 7-10!");
                     }
@@ -272,33 +337,12 @@ public class Main extends Application{
             }
         });
 
-        Runnable replayTask = new Runnable() {
-            @Override
-            public void run() {
-                GridPane playAgain = new GridPane();
-                playAgain.setAlignment(Pos.CENTER);
-                playAgain.setHgap(10);
-                playAgain.setVgap(10);
-                playAgain.setPadding(new Insets(25, 25, 25, 25));
 
-                Text promptText = new Text("Do you want to play again?");
-                promptText.setId("welcome");
-                playAgain.add(promptText, 0, 0, 10, 1);
 
-                Button startNewGame = new Button("Play Again!");
-                startNewGame.setId("startNewGame");
-                HBox hBoxStart = new HBox(10);
-                hBoxStart.setAlignment(Pos.BOTTOM_RIGHT);
-                hBoxStart.getChildren().add(startNewGame);
-                playAgain.add(hBoxStart, 5, 11);
-
-            }
-        };
-
-        Scene scene = new Scene(grid, 1700, 800);
-        scene.getStylesheets().add
+        mainScene= new Scene(grid, 1700, 800);
+        mainScene.getStylesheets().add
                 (Main.class.getResource("Main.css").toExternalForm());
-        primaryStage.setScene(scene);
+        primaryStage.setScene(mainScene);
         primaryStage.show();
     }
 
@@ -333,6 +377,11 @@ public class Main extends Application{
                 }
             }
         }
+    }
+
+    public void reset()
+    {
+        setPlayer1Turn(true);
     }
 
 
