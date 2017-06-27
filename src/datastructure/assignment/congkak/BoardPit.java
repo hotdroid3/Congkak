@@ -19,6 +19,11 @@ public class BoardPit extends Pit {
         super(seed);
     }
 
+    public BoardPit(BoardPit boardPit)
+    {
+        super(boardPit.getNumOfSeeds());
+    }
+
     public void addSeed()
     {
         setNumOfSeeds(getNumOfSeeds() + DEFAULT_ADD_VALUE);

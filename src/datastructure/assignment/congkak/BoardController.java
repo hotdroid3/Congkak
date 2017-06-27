@@ -1,5 +1,6 @@
 package datastructure.assignment.congkak;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -196,6 +197,15 @@ public class BoardController{
                 {
                     player_2_BoardPits.get(currentPit[PIT]).addSeed();
                 }
+//                try
+//                {
+//                    Thread.sleep(1000);
+//                }
+//                catch (InterruptedException e)
+//                {
+//                    System.out.println(e.getMessage());
+//                }
+
             }
             //getGameBoard().displayBoard();
             updateCurrentPit();
@@ -274,6 +284,104 @@ public class BoardController{
         return boardPitEmpty;
     }
 
+//    public int bestMove(int[] board){
+//        List<List<BoardPit>> currentState = cloneBoardPits();
+//
+//        int bScore = (int)Double.NEGATIVE_INFINITY;
+//        int bestMove = 0;
+//
+//        List<List<Integer>> moves = getPossibleMoves(true);
+//
+//        for(int move: m){
+//            int score = miniMax(false, maxDepth, currentState);
+//
+//            if(score > bScore){
+//                bScore = score;
+//                bestMove = move;
+//            }
+//        }
+//        return bestMove;
+//    }
+//
+//    public int miniMax(boolean isMin, int depth, int[] cState){
+//        int bestScore = 0;
+//
+//        if(depth == 0){
+//            return evalFunction(cState);
+//        }
+//
+//        if(isMin == false){
+//            bestScore = (int)Double.NEGATIVE_INFINITY;
+//            ArrayList<Integer> m = getPossibleMoves(false);
+//            for(int move : m){
+//                sowing(move, false);
+//                bestScore = Math.min(bestScore,miniMax(true, depth-1, cState));
+//                for(int i = 0; i < size; i++){
+//                    board[i] = cState[i];
+//                }
+//            }
+//        }else if(isMin == true){
+//            bestScore = (int)Double.POSITIVE_INFINITY;
+//            ArrayList<Integer> m = getPossibleMoves(false);
+//            for(int move : m){
+//                int[] tempState = boardState();
+//                sowing(move, true);
+//                bestScore = Math.max(bestScore,miniMax(false, depth-1, cState));
+//                for(int i = 0; i < size; i++){
+//                    board[i] = tempState[i];
+//                }
+//            }
+//        }
+//        for(int i = 0; i < size; i++){
+//            board[i] = cState[i];
+//        }
+//
+//        return bestScore;
+//    }
+//
+//    public List<List<Integer>> getPossibleMoves(boolean isMin){
+//
+//        List<List<Integer>> moves = new ArrayList<List<Integer>>(2);
+//        if(isMin)
+//        {
+//            for(int i = 0; i < getGameBoard().getBoardPitLists().get(PLAYER_2).size(); i++)
+//            {
+//                int seeds = getGameBoard().getBoardPitLists().get(PLAYER_2).get(i).getNumOfSeeds();
+//                if( seeds != 0)
+//                {
+//                    moves.get(PLAYER_2).add(i);
+//                }
+//            }
+//        }
+//        else if(!isMin)
+//        {
+//            for(int i = 0; i < getGameBoard().getBoardPitLists().get(PLAYER_1).size(); i++)
+//            {
+//                int seeds = getGameBoard().getBoardPitLists().get(PLAYER_1).get(i).getNumOfSeeds();
+//                if( seeds != 0)
+//                {
+//                    moves.get(PLAYER_1).add(i);
+//                }
+//            }
+//        }
+//        return moves;
+//    }
+//
+//    public List<List<BoardPit>> cloneBoardPits()
+//    {
+//        int size = getGameBoard().getBoardPitLists().get(PLAYER_1).size();
+//        List<List<BoardPit>> lists = new ArrayList<List<BoardPit>>(2);
+//        for(int i = 0; i < 2; i++)
+//        {
+//            List<BoardPit> list = new ArrayList<BoardPit>(size);
+//            for(int j = 0; j < size; j++)
+//            {
+//                list.add(new BoardPit(getGameBoard().getBoardPitLists().get(i).get(j)));
+//            }
+//            lists.add(list);
+//        }
+//        return lists;
+//    }
 
     public Board getGameBoard() {
         return this.gameBoard;
