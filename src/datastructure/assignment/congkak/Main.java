@@ -16,11 +16,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.util.List;
 
 
 /**
@@ -45,20 +44,11 @@ public class Main extends Application{
     private Board gameBoard;
     private BoardController boardController;
     private Scene mainScene;
+    private Label turnStatus;
 
     public static void main(String[] args) {
 
         launch(args);
-
-
-
-//
-//        boardController.executeTurn(6, player1);
-//        board.displayBoard();
-//
-//        System.out.println("======================================================");
-//        boardController.executeTurn(5,player1);
-//        board.displayBoard();
 
     }
     @Override
@@ -93,7 +83,7 @@ public class Main extends Application{
         TextField numSeeds = new TextField();
         grid.add(numSeeds, 4, 5,4,1);
 
-        Label boardSize = new Label("Number of pits per player: (7-10)");
+        Label boardSize = new Label("Number of pits per player: (5-8)");
         grid.add(boardSize, 0, 6,4,1);
 
         TextField numOfPits = new TextField();
@@ -111,17 +101,29 @@ public class Main extends Application{
         warningText.setId("warningText");
         grid.add(warningText,1,12);
 
+
+
         Runnable replayTask = new Runnable() {
             @Override
             public void run() {
+
+
                 GridPane playAgain = new GridPane();
                 playAgain.setAlignment(Pos.CENTER);
                 playAgain.setHgap(10);
                 playAgain.setVgap(10);
                 playAgain.setPadding(new Insets(25, 25, 25, 25));
-
-                Label player1Score = new Label("Player 1: " + gameBoard.getPlayerPits().get(PLAYER_1).getNumOfSeeds());
-                Label player2Score = new Label("Player 2: " + gameBoard.getPlayerPits().get(PLAYER_2).getNumOfSeeds());
+                Label player1Score = new Label("Player 1: " + gameBoard.getPlayerPits().get(PLAYER_1).getNumOfSeeds() + " seeds");
+                String player_2_Score = null;
+                if(player2.getName().equalsIgnoreCase("Computer"))
+                {
+                    player_2_Score = "Computer: " + gameBoard.getPlayerPits().get(PLAYER_2).getNumOfSeeds() + " seeds";
+                }
+                else
+                {
+                    player_2_Score = "Player 2: " + gameBoard.getPlayerPits().get(PLAYER_2).getNumOfSeeds() + " seeds";
+                }
+                Label player2Score = new Label(player_2_Score);
                 String winnerText = null;
                 int winner = boardController.isPlayerOneWinner();
                 if(winner == WON)
@@ -132,26 +134,31 @@ public class Main extends Application{
                 {
                     winnerText = "It's a draw!";
                 }
+                else if(winner == LOSS && player2.getName().equalsIgnoreCase("Computer"))
+                {
+                    winnerText = "Computer Wins";
+                }
                 else
                 {
                     winnerText = "Player 2 Wins";
                 }
                 Label win = new Label(winnerText);
+                win.setId("WinnerLabel");
 
-                playAgain.add(player1Score,0,0,7,1);
-                playAgain.add(player2Score,7,0,7,1);
-                playAgain.add(win, 10,5,10,1);
+                playAgain.add(win, 12,0);
+                playAgain.add(player1Score,8,5);
+                playAgain.add(player2Score,14,5);
+
 
                 Label promptText = new Label("Do you want to play again?");
-                //promptText.setId("welcome");
-                playAgain.add(promptText, 10, 7, 10, 1);
-
+                promptText.setId("welcome");
+                playAgain.add(promptText, 12, 10);
                 Button startNewGame = new Button("Play Again!");
                 startNewGame.setId("startNewGame");
                 HBox hBoxStart = new HBox(10);
                 hBoxStart.setAlignment(Pos.BOTTOM_CENTER);
                 hBoxStart.getChildren().add(startNewGame);
-                playAgain.add(hBoxStart, 5, 12);
+                playAgain.add(hBoxStart, 12, 15);
 
                 startNewGame.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
@@ -170,6 +177,7 @@ public class Main extends Application{
             }
         };
 
+
         Runnable task = new Runnable()
         {
             @Override
@@ -181,7 +189,7 @@ public class Main extends Application{
                 boardGridPane.setVgap(10);
                 boardGridPane.setPadding(new Insets(10, 10, 10, 10));
                 //boardGridPane.setGridLinesVisible(true);
-                Label turnStatus = new Label("Player 1 Turn");
+                Main.this.turnStatus = new Label("Player 1 Turn");
 
                 HBox hBoxTurn = new HBox(10);
                 hBoxTurn.setAlignment(Pos.TOP_CENTER);
@@ -226,6 +234,32 @@ public class Main extends Application{
                                         boardController.executeTurn(Integer.parseInt(button.getId()),Main.this.player1);
                                         setPlayer1Turn(false);
                                         turnStatus.setText(isPlayer1Turn() ? "Player 1 Turn" : "Player 2 Turn");
+
+                                        if(Main.this.player2.getName().equalsIgnoreCase("Computer"))
+                                        {
+                                            int pit = 0;
+                                            int max = 0;
+                                            List<BoardPit> list = gameBoard.getBoardPitLists().get(PLAYER_2);
+                                            int size = list.size();
+
+                                            for(int i = 0; i < size; i++)
+                                            {
+                                                if(max < list.get(i).getNumOfSeeds())
+                                                {
+                                                    max = list.get(i).getNumOfSeeds();
+                                                    pit = i;
+                                                }
+                                            }
+                                            Main.this.boardController.executeTurn(pit,Main.this.player2);
+                                            setPlayer1Turn(true);
+                                            turnStatus.setText(isPlayer1Turn() ? "Player 1 Turn" : "Player 2 Turn");
+                                            if(boardController.isPlayerBoardPitEmpty(Main.this.player2))
+                                            {
+                                                reset();
+                                                Platform.runLater(replayTask);
+                                            }
+                                        }
+
                                         if(boardController.isPlayerBoardPitEmpty(player1))
                                         {
                                             reset();
@@ -293,7 +327,7 @@ public class Main extends Application{
                     else{
                         setNumOfPlayers(numOfPlayers);
                     }
-                    if(!(numberOfSeeds>= 2 && numberOfSeeds <=9))
+                    if(!(numberOfSeeds >= 4 && numberOfSeeds <= 9))
                     {
                         throw new IllegalArgumentException("Number of seeds in pit must be from 4-9!");
                     }
@@ -301,9 +335,9 @@ public class Main extends Application{
                     {
                         setNumberOfSeeds(numberOfSeeds);
                     }
-                    if(!(numberOfPits>= 3 && numberOfPits <=10))
+                    if(!(numberOfPits >= 5 && numberOfPits <= 8))
                     {
-                        throw new IllegalArgumentException("Number of pits per player should be from 7-10!");
+                        throw new IllegalArgumentException("Number of pits per player should be from 5-8!");
                     }
                     else {
                         setNumberOfPits(numberOfPits);

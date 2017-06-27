@@ -8,13 +8,6 @@ import java.util.List;
  */
 public class BoardController{
 
-//    public static void main(String[] args) {
-//        Board board = Board.getInstance(10,16);
-//        board.displayBoard();
-//        board = Board.getInstance();
-//        board.displayBoard();
-//    }
-
     private static final int PLAYER_1 = 0;
     private static final int PLAYER_2 = 1;
     private static final int EMPTY = 0;
