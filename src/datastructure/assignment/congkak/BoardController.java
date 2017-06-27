@@ -22,6 +22,7 @@ public class BoardController{
 
     private Board gameBoard;
 
+
     private int[] currentPit;
 
     private static BoardController boardController;
@@ -154,10 +155,10 @@ public class BoardController{
         boolean finishedDistributing = false;
         int takenSeeds = takeSeeds(pit, player);
         updateCurrentPit(pit, player);
-        if(takenSeeds == EMPTY)
-        {
-            finishedDistributing = true;
-        }
+//        if(takenSeeds == EMPTY)
+//        {
+//            finishedDistributing = true;
+//        }
         while(!finishedDistributing)
         {
             for (int i = 0; i < takenSeeds; i++)
@@ -173,7 +174,7 @@ public class BoardController{
                     player_2_BoardPits.get(currentPit[PIT]).addSeed();
                 }
             }
-            getGameBoard().displayBoard();
+            //getGameBoard().displayBoard();
             updateCurrentPit();
             int[] currentPit = getCurrentPit();
             if (currentPit[PLAYER] == PLAYER_1)
@@ -266,5 +267,6 @@ public class BoardController{
     public void setCurrentPit(int[] currentPit) {
         this.currentPit = currentPit;
     }
+
 
 }

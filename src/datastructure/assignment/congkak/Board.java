@@ -21,6 +21,7 @@ public class Board {
 
     private static final int PLAYER_1 = 0;
     private static final int PLAYER_2 = 1;
+    private static final int EMPTY = 0;
 
     private Board()
     {
@@ -75,8 +76,8 @@ public class Board {
         setPlayer_1(null);
         setPlayer_2(null);
 
-        getPlayerPits().add(PLAYER_1, new PlayerPit());
-        getPlayerPits().add(PLAYER_2, new PlayerPit());
+        getPlayerPits().add(PLAYER_1, new PlayerPit(EMPTY));
+        getPlayerPits().add(PLAYER_2, new PlayerPit(EMPTY));
 
         for(int i = 0; i < size; i++)
         {
