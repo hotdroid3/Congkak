@@ -19,6 +19,9 @@ public class BoardController{
     private static final int EMPTY = 0;
     private static final int PLAYER = 0;
     private static final int PIT = 1;
+    private static final int WON = 0;
+    private static final int LOSS = 1;
+    private static final int DRAW = 2;
 
     private Board gameBoard;
 
@@ -141,6 +144,26 @@ public class BoardController{
         {
             int[] currentPit = {PLAYER_2, pit};
             setCurrentPit(currentPit);
+        }
+
+    }
+
+    public int isPlayerOneWinner()
+    {
+        List<PlayerPit> playerpits = getGameBoard().getPlayerPits();
+        int player1seeds = playerpits.get(PLAYER_1).getNumOfSeeds();
+        int player2seeds = playerpits.get(PLAYER_2).getNumOfSeeds();
+        if(player1seeds > player2seeds)
+        {
+            return WON;
+        }
+        else if(player1seeds < player2seeds)
+        {
+            return LOSS;
+        }
+        else
+        {
+            return DRAW;
         }
 
     }
